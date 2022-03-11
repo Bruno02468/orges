@@ -18,7 +18,7 @@ pub(crate) struct Cachorges {
 impl Default for Cachorges {
   fn default() -> Self {
     let blocks = 4;
-    let entries_per_block = 2048;
+    let entries_per_block = 512;
     let mut v: Vec<RefCell<CacheBlock>> = Vec::with_capacity(blocks);
     for _ in [0..blocks] {
       v.push(RefCell::new(
@@ -77,11 +77,10 @@ impl Cachorges {
   }
 
   pub(crate) fn orges_string(&self, txt: &str, rate: f64) -> String {
-    log::info!("cache size: {}", self.current_block_mut().len());
     let h = *self.hits.borrow();
     let m = *self.misses.borrow();
     log::info!(
-      "hits: {}, misses: {} (hit rate: {}%)",
+      "cache info: {} hits, {} misses (hit rate: {}%)",
       h,
       m,
       (h as f64)/((h + m) as f64)*100.0
