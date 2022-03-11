@@ -12,45 +12,21 @@
     href="//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" type="text/css"
     href="//cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
-    <script src="orges.js" defer></script>
     <style>
-      .center {
+      .center, center, body {
         text-align: center;
       }
-      textarea {
-        width: 90%;
+      .converter-text {
+        width: 60%;
         height: 10em;
       }
-      #grorges {
-        width: 90%;
+      .converter-range {
+        width: 30%;
+        vertical-align: bottom;
+        margin-bottom: 0;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="row center">
-        <h3>geradorges</h3>
-        <br>
-        <br>
-      </div>
-      <div class="row center">
-        <div class="six columns">
-          <h5>texto:</h5>
-          <textarea id="texto" oninput="updatorges();"></textarea>
-          <br>
-          <h5>grau de orges:</h5>
-          <input type="range" min="0" max="100" step="1"
-          onchange="updatorges()" id="grorges">
-          <br>
-          <h5>excessorges:</h5>
-          <textarea id="excessorges" oninput="updatorges();"></textarea>
-          <br>
-        </div>
-        <div class="six columns">
-          <h5>textorges:</h5>
-          <textarea readonly id="textorges" onclick="clicorges();"></textarea>
-        </div>
-      </div>
-    </div>
   </body>
 </html>

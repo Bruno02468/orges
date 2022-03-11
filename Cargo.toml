@@ -1,0 +1,28 @@
+[package]
+name = "orges"
+authors = ["Bruno Borges Paschoalinoto"]
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+yew = "0.19"
+lazy_static = "1.4"
+rand = "0.8"
+wasm-logger = "0.2"
+log = "0.4"
+
+[dependencies.getrandom]
+version = "0.2"
+features = ["js"]
+
+[dependencies.web-sys]
+version = "0.3"
+features = [
+  "Event",
+  "InputEvent",
+  "MouseEvent",
+  "HtmlTextAreaElement",
+  "HtmlInputElement"
+]
