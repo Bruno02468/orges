@@ -94,7 +94,13 @@ impl Component for Converter {
           oninput={ rc }
         />
         <br/>
-        { format!("taxa: {}%", (self.rate*100.0) as usize) }
+        {
+          format!(
+            "{}: {}%",
+            if self.rate > 0.99 { "taxorges" } else { "taxa" },
+            (self.rate*100.0) as usize
+          )
+        }
         <br/>
         <button
           class="converter-btn"

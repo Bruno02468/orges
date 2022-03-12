@@ -88,6 +88,9 @@ lazy_static! {
     ye("ss", "ssorges");
     ye("ç", "çorges");
     ye("iou", "iorges");
+    ye("org", "orges");
+    ye("or", "orges");
+    ye("orge", "orges");
     return m;
   };
   static ref VOWELS: Vec<char> = {
